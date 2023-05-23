@@ -1,0 +1,8 @@
+###
+http://localhost:4004
+###
+http://localhost:4004/mashup
+###
+http://localhost:4004/mashup/$metadata
+###
+http://localhost:4004/mashup/Hello(name='World')
