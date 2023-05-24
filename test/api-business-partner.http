@@ -1,0 +1,19 @@
+### Local Mock Server
+GET http://localhost:4004/api-business-partner
+###
+GET http://localhost:4004/api-business-partner/$metadata
+###
+GET http://localhost:4004/api-business-partner/A_BusinessPartner
+
+### api.sap.com Sandbox
+GET https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER
+APIKey: {{$dotenv apikey}}
+###
+GET https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/$metadata
+APIKey: {{$dotenv apikey}}
+###
+GET https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/A_BusinessPartner
+  ?$top=10
+  &$skip=9
+APIKey: {{$dotenv apikey}}
+Accept: application/json
