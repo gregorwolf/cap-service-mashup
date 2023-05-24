@@ -23,8 +23,10 @@
   },
   "cds": {
     "requires": {
-      "db": "hana-cloud",
-      "auth": "xsuaa"
+      "[production]": {
+        "db": "hana-cloud",
+        "auth": "xsuaa"
+      }
     }
   }
 }
