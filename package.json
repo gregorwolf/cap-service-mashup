@@ -27,6 +27,10 @@
       "[production]": {
         "db": "hana-cloud",
         "auth": "xsuaa"
+      },
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
       }
     }
   }
