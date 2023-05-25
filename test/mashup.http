@@ -6,3 +6,11 @@ http://localhost:4004/mashup
 http://localhost:4004/mashup/$metadata
 ###
 http://localhost:4004/mashup/Hello(name='World')
+### test service consumption against mock
+http://localhost:4004/mashup/BusinessPartners
+  ?$top=2
+### test service consumption against the api.sap.com sandbox
+http://localhost:4004/mashup/BusinessPartners
+  ?$top=10
+  &$skip=10
+  &$select=BusinessPartner,BusinessPartnerFullName
