@@ -1,5 +1,3 @@
 service MashupService {
-
-    function Hello(name: String) returns String;
-
+    function Hello(name : String) returns String;
 }
