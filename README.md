@@ -27,7 +27,7 @@ mbt build
 Login:
 
 ```
-cf login
+cf login --sso
 ```
 
 Deploy:
@@ -219,6 +219,18 @@ filled with your own api.sap.com API Key.
 
 ## Test the service via the destination service
 
+With [Hybrid Testing](https://cap.cloud.sap/docs/advanced/hybrid-testing#hybrid-testing) it's possible to [Connect to Remote Services from Local](https://cap.cloud.sap/docs/guides/using-services#connect-to-remote-services-from-local). When you followed the workshop from the beginning and deployed the CAP app to BTP Cloud Foundry you can execute the following commands:
 
+```bash
+cf create-service-key cap-service-mashup-auth cap-service-mashup-auth-key
+cf csk cap-service-mashup-destination cap-service-mashup-destination-key
+cds bind -2 cap-service-mashup-auth,cap-service-mashup-destination
+```
+
+This created a `.cdsrc-private.json` file that contains the bound services.
+
+```bash
+cds watch --profile hybrid
+```
 
 ## Consume the service via the deployed app.
