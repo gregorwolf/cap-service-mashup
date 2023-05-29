@@ -26,6 +26,7 @@ modules:
     requires:
       - name: cap-service-mashup-db
       - name: cap-service-mashup-auth
+      - name: cap-service-mashup-destination
 
   - name: cap-service-mashup-db-deployer
     type: hdb
@@ -50,7 +51,6 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: cap-service-mashup-auth
-      - name: cap-service-mashup-destination
 
 resources:
   - name: cap-service-mashup-db
