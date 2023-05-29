@@ -207,8 +207,18 @@ cds run --profile sandbox
 
 Run now the REST Client request "test service consumption against the api.sap.com sandbox"
 
-Create a destination to the remote mock service
+## Create a destination to the api.sap.com sandbox
 
-Test the service via the destination service
+Import the file `API_Sandox` into your BTP Subaccount and add the Additional Property:
 
-Consume the service via the deployed app.
+```
+URL.headers.apikey
+```
+
+filled with your own api.sap.com API Key.
+
+## Test the service via the destination service
+
+
+
+## Consume the service via the deployed app.
