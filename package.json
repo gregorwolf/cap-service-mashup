@@ -37,6 +37,13 @@
             "requestTimeout": 30000,
             "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER"
           }
+        },
+        "[hybrid]": {
+          "credentials": {
+            "destination": "API_Sandox",
+            "requestTimeout": 30000,
+            "path": "/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+          }
         }
       }
     }
