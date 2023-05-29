@@ -227,10 +227,42 @@ cf csk cap-service-mashup-destination cap-service-mashup-destination-key
 cds bind -2 cap-service-mashup-auth,cap-service-mashup-destination
 ```
 
-This created a `.cdsrc-private.json` file that contains the bound services.
+This created a `.cdsrc-private.json` file that contains the bound services. To use this service binding this section needs to be added to `package.json`:
+
+```JSON
+,
+        "[hybrid]": {
+          "credentials": {
+            "destination": "API_Sandox",
+            "requestTimeout": 30000,
+            "path": "/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+          }
+        }
+```
+
+Now you can run:
 
 ```bash
 cds watch --profile hybrid
 ```
 
-## Consume the service via the deployed app.
+## Consume the service via the deployed app
+
+Before you can deploy and run the app this section needs to be added to `package.json`:
+
+```JSON
+,
+        "[production]": {
+          "credentials": {
+            "destination": "API_Sandox",
+            "requestTimeout": 30000,
+            "path": "/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+          }
+        }
+```
+
+Then run the build & deploy from the beginning. Then try
+
+```
+https://<org>-<space>-cap-service-mashup.cfapps.<region>.hana.ondemand.com/mashup/BusinessPartners?$top=10
+```
