@@ -50,6 +50,7 @@ modules:
           url: ~{srv-url}
           forwardAuthToken: true
       - name: cap-service-mashup-auth
+      - name: cap-service-mashup-destination
 
 resources:
   - name: cap-service-mashup-db
@@ -66,3 +67,8 @@ resources:
       config:
         xsappname: cap-service-mashup-${org}-${space}
         tenant-mode: dedicated
+  - name: cap-service-mashup-destination
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service
