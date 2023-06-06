@@ -45,6 +45,20 @@ cf deploy mta_archives/cap-service-mashup_1.0.0.mtar
 
 Find the Link to the App `cap-service-mashup` in the SAP BTP Cockpit and open it in a new browser tab. You should see a link to the `Hello` function.
 
+## Create a branch for the next steps
+
+To make it easy to switch also to the `dev` branch with contains the solution you should create a new branch `MasteringSAP` by running:
+
+```bash
+git checkout -b MasteringSAP
+```
+
+you can then either commit or stash your changes and switch to the `dev` branch by running:
+
+```bash
+git checkout dev
+```
+
 ## Discover the S/4HANA (Cloud) Business Partner API
 
 Find the API by searching https://api.sap.com/ for "Business Partner" and filter for S/4HANA Cloud:
