@@ -10,6 +10,13 @@ It contains these folders and files, following our recommended project layout:
 | `package.json` | project metadata and configuration   |
 | `README.md`    | this getting started guide           |
 
+## Pre-requisites
+
+- SAP BTP Trial or Free Tier Account
+- activated Cloud Foundry Environment
+- activated and started SAP HANA Cloud instance
+- SAP Business Application Studio with CAP Dev Space already setup
+
 ## Next Steps
 
 - Open a new terminal and run `cds watch`
@@ -27,7 +34,7 @@ mbt build
 Login:
 
 ```
-cf login --sso
+cf login -a <Your BTP Cloud Foundry API Endpoint> -o <CF-Organization> -s <CF-Space> --sso
 ```
 
 Deploy:
