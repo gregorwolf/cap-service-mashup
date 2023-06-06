@@ -43,6 +43,8 @@ Deploy:
 cf deploy mta_archives/cap-service-mashup_1.0.0.mtar
 ```
 
+Find the Link to the App `cap-service-mashup` in the SAP BTP Cockpit and open it in a new browser tab. You should see a link to the `Hello` function.
+
 ## Discover the S/4HANA (Cloud) Business Partner API
 
 Find the API by searching https://api.sap.com/ for "Business Partner" and filter for S/4HANA Cloud:
@@ -53,7 +55,7 @@ Login and use the tryout function to test the GET request of the Business Partne
 
 ## Import the service
 
-Switch back to Overview to download the API specificaiton in EDMX format. Store it in `srv/external`. If you have trouble downloading the file use the one from the `assets` folder.
+Switch back to Overview to download the API specification in EDMX format. Store it in `srv/external`. If you have trouble downloading the file use the one from the `assets` folder.
 
 Translate the EDMX file to CAP CDS using:
 
@@ -216,7 +218,7 @@ Run now the REST Client request "test service consumption against the api.sap.co
 
 ## Create a destination to the api.sap.com sandbox
 
-Import the file `API_Sandox` into your BTP Subaccount and add the Additional Property:
+Import the file `API_Sandbox` into your BTP Subaccount and add the Additional Property:
 
 ```
 URL.headers.apikey
@@ -240,7 +242,7 @@ This created a `.cdsrc-private.json` file that contains the bound services. To u
 ,
         "[hybrid]": {
           "credentials": {
-            "destination": "API_Sandox",
+            "destination": "API_Sandbox",
             "requestTimeout": 30000,
             "path": "/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
           }
@@ -261,7 +263,7 @@ Before you can deploy and run the app this section needs to be added to `package
 ,
         "[production]": {
           "credentials": {
-            "destination": "API_Sandox",
+            "destination": "API_Sandbox",
             "requestTimeout": 30000,
             "path": "/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
           }
