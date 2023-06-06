@@ -19,6 +19,7 @@ modules:
       buildpack: nodejs_buildpack
     build-parameters:
       builder: npm-ci
+      ignore: ["node_modules/"]
     provides:
       - name: srv-api # required by consumers of CAP services (e.g. approuter)
         properties:
@@ -31,6 +32,8 @@ modules:
   - name: cap-service-mashup-db-deployer
     type: hdb
     path: gen/db
+    build-parameters:
+      ignore: ["node_modules/"]
     parameters:
       buildpack: nodejs_buildpack
     requires:
@@ -39,6 +42,8 @@ modules:
   - name: cap-service-mashup
     type: approuter.nodejs
     path: app/ # from cds.env.folders. Consider also cds.env.build.target -> gen/app
+    build-parameters:
+      ignore: ["node_modules/"]
     parameters:
       keep-existing-routes: true
       disk-quota: 256M
