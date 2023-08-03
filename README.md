@@ -177,7 +177,7 @@ Run the REST Client script again. You will get another error:
 Fix this by adding the following npm modules:
 
 ```bash
-npm add @sap-cloud-sdk/http-client@2.x @sap-cloud-sdk/util@2.x @sap-cloud-sdk/connectivity@2.x
+npm add @sap-cloud-sdk/http-client@3.x @sap-cloud-sdk/util@3.x @sap-cloud-sdk/connectivity@3.x
 ```
 
 Start

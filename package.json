@@ -9,13 +9,14 @@
     "node": "^16"
   },
   "dependencies": {
-    "@sap/cds": "^6",
+    "@sap/cds": "^7",
+    "@sap/xssec": "^3",
     "express": "^4",
     "hdb": "^0.19.0",
-    "@sap/xssec": "^3",
     "passport": "^0"
   },
   "devDependencies": {
+    "@cap-js/sqlite": "^1.1.0",
     "sqlite3": "^5"
   },
   "scripts": {
