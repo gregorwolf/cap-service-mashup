@@ -1,16 +1,16 @@
 ###
 http://localhost:4004
 ###
-http://localhost:4004/mashup
+http://localhost:4004/odata/v4/mashup
 ###
-http://localhost:4004/mashup/$metadata
+http://localhost:4004/odata/v4/mashup/$metadata
 ###
-http://localhost:4004/mashup/Hello(name='World')
+http://localhost:4004/odata/v4/mashup/Hello(name='World')
 ### test service consumption against mock
-http://localhost:4004/mashup/BusinessPartners
+http://localhost:4004/odata/v4/mashup/BusinessPartners
   ?$top=2
 ### test service consumption against the api.sap.com sandbox
-http://localhost:4004/mashup/BusinessPartners
+http://localhost:4004/odata/v4/mashup/BusinessPartners
   ?$top=10
   &$skip=10
   &$select=BusinessPartner,BusinessPartnerFullName
