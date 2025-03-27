@@ -1,22 +1,22 @@
 {
   "name": "cap-service-mashup",
   "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "description": "Create a Service Mashup using the SAP Cloud Application Programming Model",
+  "repository": "https://github.com/gregorwolf/cap-service-mashup",
   "license": "UNLICENSED",
   "private": true,
   "engines": {
-    "node": "^16"
+    "node": "^20"
   },
   "dependencies": {
-    "@sap/cds": "^7",
-    "@sap/xssec": "^3",
+    "@sap/cds": "^8",
+    "@sap/xssec": "^4",
     "express": "^4",
-    "hdb": "^0.19.0",
+    "hdb": "^0",
     "passport": "^0"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1.1.0",
+    "@cap-js/sqlite": "^1",
     "sqlite3": "^5"
   },
   "scripts": {
