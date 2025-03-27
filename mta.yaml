@@ -1,4 +1,4 @@
-_schema-version: '3.1'
+_schema-version: "3.1"
 ID: cap-service-mashup
 version: 1.0.0
 description: "A simple CAP project."
@@ -18,7 +18,6 @@ modules:
       memory: 256M
       buildpack: nodejs_buildpack
     build-parameters:
-      builder: npm-ci
       ignore: ["node_modules/"]
     provides:
       - name: srv-api # required by consumers of CAP services (e.g. approuter)
