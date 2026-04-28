@@ -9,15 +9,13 @@
     "node": "^20"
   },
   "dependencies": {
-    "@sap/cds": "^8",
+    "@cap-js/hana": "^2.7.1",
+    "@sap/cds": "^9",
     "@sap/xssec": "^4",
-    "express": "^4",
-    "hdb": "^0",
-    "passport": "^0"
+    "express": "^5"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1",
-    "sqlite3": "^5"
+    "@cap-js/sqlite": "^2"
   },
   "scripts": {
     "start": "cds-serve"
